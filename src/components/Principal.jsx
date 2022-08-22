@@ -1,7 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import homeImage from "../assets/illimani.jpg";
-export default function Hero() {
+import { Autocomplete } from '@react-google-maps/api';
+export default function Hero({onPlaceChanged, onLoad, showHotels}) {
+
   return (
     <Section id="hero">
       <div className="background">
@@ -17,7 +19,9 @@ export default function Hero() {
         <div className="search">
           <div className="container">
             <label htmlFor="">Cual es tu destino?</label>
-            <input type="text" placeholder="Introduce el destino" />
+            <Autocomplete onLoad={onLoad} onPlaceChanged={onPlaceChanged}>
+              <input type="text" placeholder="Introduce el destino" />
+            </Autocomplete>
           </div>
           <div className="container">
             <label htmlFor="">Check-in</label>
@@ -35,7 +39,7 @@ export default function Hero() {
             <label htmlFor="">Niños</label>
             <input type="number" min="0" max="48" placeholder="0" />
           </div>
-          <button>Buscar</button>
+          <button onClick={showHotels}>Buscar</button>
         </div>
       </div>
     </Section>
