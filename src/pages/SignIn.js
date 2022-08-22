@@ -27,6 +27,7 @@ function Copyright(props) {
 const theme = createTheme({});
 
 export default function SignIn() {
+  console.log("Backend: " + process.env.REACT_APP_BACK_ENDPOINT);
 
   const navigate = useNavigate();
 
