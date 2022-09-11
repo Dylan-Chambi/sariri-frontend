@@ -14,7 +14,7 @@ jobs:
         run: npm install @mui/icons-material --legacy-peer-deps
       - uses: actions/checkout@v2
       - name: install
-        run: npm install
+        run: npm install @mui/material @emotion/react @emotion/styled && npm install
       - run: npm run build
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
