@@ -13,7 +13,7 @@ jobs:
       - name: INstall ui 2
         run: npm install @mui/icons-material --legacy-peer-deps
       - uses: actions/checkout@v2
-      - run: npm ci && npm run build
+      - run: npm run build
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
