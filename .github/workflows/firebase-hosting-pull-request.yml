@@ -8,6 +8,10 @@ jobs:
     if: '${{ github.event.pull_request.head.repo.full_name == github.repository }}'
     runs-on: ubuntu-latest
     steps:
+      - name: install UI
+        run: npm install @mui/material @emotion/react @emotion/styled --legacy-peer-deps
+      - name: INstall ui 2
+        run: npm install @mui/icons-material --legacy-peer-deps
       - uses: actions/checkout@v2
       - run: npm ci && npm run build
       - uses: FirebaseExtended/action-hosting-deploy@v0
