@@ -7,7 +7,7 @@ import App from './App';
 import './index.css';
 
 
-const root = createRoot(document.getElementById('root'));
+const root = document.getElementById('root');
 
 root.render(
 
