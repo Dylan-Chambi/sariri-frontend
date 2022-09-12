@@ -9,12 +9,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: install UI
-        run: npm install @mui/material @emotion/react @emotion/styled --legacy-peer-deps
+        run: npm ci
       - name: INstall ui 2
-        run: npm install @mui/icons-material --legacy-peer-deps
+        run: npm i
       - uses: actions/checkout@v2
-      - name: install
-        run: npm install @mui/material @emotion/react @emotion/styled && npm install --legacy-peer-deps
       - run: npm run build
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
