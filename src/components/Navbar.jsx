@@ -55,7 +55,7 @@ export default function Navbar() {
             <Link to="/favs">Favoritos</Link>
           </li>
           <li>
-            <Link to="/map">Mapa</Link>
+            <Link to="#hotels">Mapa</Link>
           </li>
           <li>
             <Link to="/profile" >Perfil</Link>
