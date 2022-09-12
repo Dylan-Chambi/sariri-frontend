@@ -23,7 +23,7 @@ export default function Hero({onPlaceChanged, onLoad, showHotels, checkIn, setCh
         <div className="search">
           <div className="container">
             <label htmlFor="">Cual es tu destino?</label>
-            <Autocomplete onLoad={onLoad} onPlaceChanged={onPlaceChanged}>
+            <Autocomplete onLoad={onLoad}>
               <Destination/>
             </Autocomplete>
           </div>
@@ -45,7 +45,7 @@ export default function Hero({onPlaceChanged, onLoad, showHotels, checkIn, setCh
             <Select numGuests={numGuests} setNumGuests={setNumGuests} isParent={false} />
 
           </div>
-          <button onClick={showHotels}>Buscar</button>
+          <button onClick={onPlaceChanged}>Buscar</button>
         </div>
       </div>
     </Section>
