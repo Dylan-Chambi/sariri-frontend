@@ -5,7 +5,6 @@ import Typography from '@mui/material/Typography';
 import Calendar from './Calendar';
 import Huespedes from './Huespedes';
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
@@ -17,7 +16,6 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 });
 
 export default function DisableElevation({ price, checkIn, checkOut, numGuests }) {
-  const navigate = useNavigate();
   const [nroHuespedes, setNroHuespedes] = useState(numGuests);
   const [nroNoches, setNroNoches] = useState(1);
   const [open, setOpen] = React.useState(false);

@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import Profile from "../pages/Profile";
 export default function Footer() {
   return (
     <FooterContainer>
