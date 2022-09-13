@@ -1,22 +1,20 @@
 import React from "react";
 import styled from "styled-components";
 import Profile from "../pages/Profile";
+import { Link, useNavigate } from "react-router-dom";
 export default function Footer() {
   return (
     <FooterContainer>
       <span>Copyright &copy; 2022 Sariri. All rights reserved</span>
       <ul className="links">
         <li>
-          <a href="/home" >Inicio</a>
+          <Link to="/home">Inicio</Link>
         </li>
         <li>
-          <a href="/favs">Favoritos</a>
+          <Link to="/favs">Favoritos</Link>
         </li>
         <li>
-          <a href="/map">Mapa</a>
-        </li>
-        <li>
-          <a href="/profile">Perfil</a>
+          <Link to="/profile" >Perfil</Link>
         </li>
       </ul>
     </FooterContainer>
@@ -28,7 +26,7 @@ const FooterContainer = styled.footer`
   justify-content: space-evenly;
   background-color: #d0d8ff;
   border-radius: 0.5rem;
-  padding: 2.5rem;
+  padding: 1.4rem;
 
   ul {
     display: flex;

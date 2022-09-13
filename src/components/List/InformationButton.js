@@ -7,6 +7,7 @@ import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 import Slide from '@mui/material/Slide';
 import InfoIcon from '@mui/icons-material/Info';
+import Box from '@mui/material/Box';
 
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
@@ -24,11 +25,24 @@ export default function AlertDialogSlide() {
   };
 
   return (
-    <div>
+    <Box sx={{
+      display: 'flex',
+      flexDirection: 'row',
+      alignItems: 'center',
+      justifyContent: 'space-evenly',
+      marginLeft: '8%',
+      color: 'white',
+      bgcolor: '#fff',
+      borderRadius: '10px',
+    }}>
       <Button variant="outlined" onClick={handleClickOpen}
         sx={{
           color: '#fff',
           borderColor: '#fff',
+          width: '100%',
+          height: '100%',
+          bgcolor: '#fff',
+
         }}
       >
         <InfoIcon />
@@ -57,6 +71,6 @@ export default function AlertDialogSlide() {
           <Button onClick={handleClose}>OK</Button>
         </DialogActions>
       </Dialog>
-    </div>
+    </Box>
   );
 }
