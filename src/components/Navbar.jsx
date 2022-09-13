@@ -49,13 +49,10 @@ export default function Navbar() {
 
         <ul>
           <li>
-           <a href="#home">Inicio</a>
+           <Link to="/home">Inicio</Link>
           </li>
           <li>
             <Link to="/favs">Favoritos</Link>
-          </li>
-          <li>
-            <a href="#hotels">Mapa</a>
           </li>
           <li>
             <Link to="/profile" >Perfil</Link>

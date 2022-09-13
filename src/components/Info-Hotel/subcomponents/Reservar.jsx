@@ -44,7 +44,7 @@ export default function DisableElevation({ price, checkIn, checkOut, numGuests }
         <Box sx={{ backgroundColor: "#B9C7D8", display:'flex', 
         alignItems: 'center', justifyContent: 'center', borderRadius: 2, padding:1, margin: 5 }}>
           <Typography sx={{fontWeight: 'bold', fontSize:18}}>
-            Precio sumado: {price*nroHuespedes*nroNoches}$
+            Precio total: {price*nroHuespedes*nroNoches}$
           </Typography>
         </Box>
         <Button variant="contained" padding={10} sx={{ margin: 5, width: '100px', height: '50px',

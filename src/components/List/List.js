@@ -57,14 +57,19 @@ const List = ({ places, childClicked, isLoading, setPriceRange, priceRange, setM
 
 
       >
+        <Box display="flex" alignItems="center" justifyContent="center" sx={{
+          spacing: 2,
+        }}>
         <Typography variant="h4">Encuentra tu hotel!</Typography>
+        <InformationButton />
+        </Box>
         {isLoading ? (
           <div className={classes.loading}>
             <CircularProgress size="5rem" color='inherit' />
           </div>
         ) : (
           <>
-            <Box display="flex" justifyContent="space-between" alignItems="center" marginBottom={4}>
+            <Box display="flex" justifyContent="space-between" alignItems="center" marginBottom={4} color="white">
               <Box display="flex" alignItems="center" marginRight={4} flexDirection="column" >
                 <Typography variant="h6">Rango de Precio</Typography>
                 <FormControl fullWidth>
@@ -79,7 +84,7 @@ const List = ({ places, childClicked, isLoading, setPriceRange, priceRange, setM
                 </FormControl>
               </Box>
 
-              <Box display="flex" alignItems="center" flexDirection="column" >
+              <Box display="flex" alignItems="center" flexDirection="column">
                 <Typography variant="h6">Limite de resultados</Typography>
                 <FormControl fullWidth>
                   <Select id="demo-simple-select-label" value={maxPlaces} onChange={(e) => {
@@ -96,7 +101,7 @@ const List = ({ places, childClicked, isLoading, setPriceRange, priceRange, setM
                 </FormControl>
               </Box>
 
-              <InformationButton />
+              
 
             </Box>
             <Grid container spacing={3} className={classes.list}>
